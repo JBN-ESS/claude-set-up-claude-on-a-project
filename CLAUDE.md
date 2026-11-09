@@ -21,8 +21,8 @@ CI (`.github/workflows/ci.yml`) runs `npm run lint` then `npm test` on Node 22. 
 - Route handlers access data only through `db/store.js` functions, never by touching the `users` array directly.
 - Errors are returned as JSON `{ error: "<message>" }` with the matching status code (400 for validation, 404 for not found).
 - Unused route params must be named `req`, `res`, `next`, or `_` to avoid lint warnings.
-- Use async/await for api calls, nto callbacks
-- Prefer "const" instead "var" declarations where it is possible 
+- Use async/await for api calls, not callbacks
+- Prefer "const" instead "var" declarations where it is possible - modern JS only
 - One route file per resource - don't combine code for different endpoints into one file
 
 ## Architecture
